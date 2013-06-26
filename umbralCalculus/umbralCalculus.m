@@ -412,8 +412,8 @@ With[{allNu=Flatten[Join[allLambda[gArgs,#]&/@{diffOrder}],1]},Transpose[lambdaS
 And[Length[gg[[1]]]>=pascal[diffOrder,gArgs]-1,Length[ff[[1]]]>=pascal[diffOrder,Length[gg]]-1]
 
 lambdaFacetDiffOrder[diffOrder_Integer,gArgs_Integer,ff_?MatrixQ,gg_?MatrixQ]:=
-With[{},
-	Print[StringForm["With diffOrder=`` gArgs=`` gMat should have at least `` columns and exactly `` rows. fMat should have at least `` columns",
+With[{},Print[{"umbralCalculus`lambdaFacetDiffOrder:",diffOrder,gArgs,ff,gg}];
+	Print[StringForm["lambdaFacetDiffOrder:With diffOrder=`` gArgs=`` gMat should have at least `` columns and exactly `` rows. fMat should have at least `` columns",
 		 diffOrder,gArgs,pascal[diffOrder,gArgs]-1,gArgs,pascal[diffOrder,Length[gg]]-1]]]
 
 allLambda[mm_Integer,nn_Integer]:=Reverse[Compositions[nn,mm]]
